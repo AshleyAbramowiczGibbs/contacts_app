@@ -1,0 +1,5 @@
+{
+  "name": "personal-contacts--database-postgresql",
+  "private": true,
+  "dependencies": {}
+}
