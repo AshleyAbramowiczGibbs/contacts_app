@@ -11,6 +11,8 @@ class Api::ContactsController < ApplicationController
       last_name: params["last"],
       phone_number: params["phone"],
       email: params["email"],
+      middle_name: params["middle_name"],
+      Bio: params["bio"]
       )
        @contacts.save
        render "show.json.jbuilder"
@@ -27,6 +29,8 @@ class Api::ContactsController < ApplicationController
     @contacts.last_name = params["last"] || @contacts.last_name
     @contacts.email = params["email"] || @contacts.email
     @contacts.phone_number = params["phone"] || @contacts.phone_number
+    @contacts.middle_name = params["middle_name"] || @contacts.middle_name
+    @contacts.Bio = params["bio"] || @contacts.bio
     @contacts.save
     render "show.json.jbuilder"
   end

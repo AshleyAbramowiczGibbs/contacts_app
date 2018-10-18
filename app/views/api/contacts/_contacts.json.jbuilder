@@ -1,0 +1,10 @@
+json.id contacts.id
+json.first contacts.first_name
+json.last contacts.last_name
+json.email contacts.email
+json.phone contacts.phone_number
+json.new_time contacts.friendly_updated_at
+json.full_name contacts.full_name
+json.japan_phone contacts.japan_phone
+json.middle_name contacts.middle_name
+json.bio contacts.Bio
