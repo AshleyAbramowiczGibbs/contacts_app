@@ -2,6 +2,12 @@ class Api::ContactsController < ApplicationController
 
   def index
     @contacts = Contact.all
+    #search for contact with specific first name
+    search = params[:name]
+    if search
+      @contacts = @contacts.where("name ILIKE ?", "%" + search + "%")
+    end
+    #expand your search to make all other attributes searchable
     render "index.json.jbuilder"
   end
 
